@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Infographic: AI Portfolio for Beginners</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background-image: linear-gradient(to right, #38bdf8, #2dd4bf);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .card-border-teen {
+            border-color: #2dd4bf; /* teal-400 */
+        }
+        .card-border-parent {
+            border-color: #38bdf8; /* sky-500 */
+        }
+        /* Style for smooth accordion transitions */
+        .prompt-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease-in-out, padding 0.5s ease-in-out;
+            padding-left: 1rem; /* px-4 */
+            padding-right: 1rem; /* px-4 */
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .prompt-content.open {
+            max-height: 1200px; /* Set a large enough max-height for the new content */
+            padding-top: 0.5rem; /* pt-2 */
+            padding-bottom: 1rem; /* pb-4 */
+        }
+        .chevron-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300">
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 sm:p-6 md:p-12 max-w-6xl">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">AI Beginner's <span class="gradient-text">Portfolio</span></h1>
+            <p class="text-slate-400 mt-2 text-lg">By: R. Bagus Bashilla R (Boden)</p>
+            <div class="mt-6 max-w-3xl mx-auto bg-slate-800/50 border border-slate-700 p-6 rounded-xl">
+                <h2 class="text-xl font-bold text-white mb-2">📄 About The Project</h2>
+                <p class="text-slate-400">
+                    This project aims to help teenagers (13-17) and parents (40+) learn and use AI tools like ChatGPT and Gemini easily, enjoyably, and safely.
+                </p>
+            </div>
+        </header>
+
+        <!-- Personas Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center text-white mb-8">👥 User Personas & Needs</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Teen Persona Card -->
+                <div class="bg-slate-800 p-6 rounded-2xl border-t-4 card-border-teen shadow-2xl shadow-teal-500/10 transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-2xl font-bold text-teal-400 mb-4">Teens (13-17)</h3>
+                    <div class="space-y-3 text-slate-300">
+                        <p><strong class="font-semibold text-white">Needs:</strong> School assignments, creative ideas, entertainment.</p>
+                        <p><strong class="font-semibold text-white">Challenges:</strong> Get bored easily, prefer fast & visual content.</p>
+                        <p><strong class="font-semibold text-white">Approach:</strong> Casual language, visual examples, and relevant topics.</p>
+                    </div>
+                </div>
+
+                <!-- Parent Persona Card -->
+                <div class="bg-slate-800 p-6 rounded-2xl border-t-4 card-border-parent shadow-2xl shadow-sky-500/10 transition-transform duration-300 hover:scale-105">
+                     <h3 class="text-2xl font-bold text-sky-400 mb-4">Parents (40+)</h3>
+                    <div class="space-y-3 text-slate-300">
+                        <p><strong class="font-semibold text-white">Needs:</strong> Finding information, helping their kids, communication.</p>
+                        <p><strong class="font-semibold text-white">Challenges:</strong> Tech anxiety, fear of making mistakes.</p>
+                        <p><strong class="font-semibold text-white">Approach:</strong> Step-by-step guidance, simple language.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompts Section -->
+        <section>
+            <h2 class="text-3xl font-bold text-center text-white mb-10">✍️ Example Prompts, Outputs & Notes</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Prompts for Teens -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-teal-400 text-center lg:text-left mb-4">For Teens</h3>
+                    <!-- Prompt 1 -->
+                    <div class="prompt-container bg-slate-800 rounded-lg border border-slate-700 transition-all duration-300 hover:border-teal-500"><button class="prompt-toggle w-full text-left p-4 flex justify-between items-center cursor-pointer"><span class="font-semibold">Summarizing School Readings</span><svg class="chevron-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="prompt-content"><strong class="block text-slate-300 mb-1 mt-2">Prompt:</strong><p class="prompt-text-to-copy text-slate-400">"Write a 200-word summary of chapter 1 of the novel 'Laskar Pelangi', using a high schooler's tone."</p><button class="copy-btn mt-3 bg-teal-500/10 text-teal-300 px-3 py-1 rounded-md text-sm hover:bg-teal-500/20">Copy Prompt</button><strong class="block text-slate-300 mb-1 mt-4">Example Output:</strong><blockquote class="border-l-2 border-slate-600 pl-3 text-slate-400 italic">Ikal is a smart kid from a village in Belitong with a huge curiosity...</blockquote><strong class="block text-slate-300 mb-1 mt-4">Notes:</strong><p class="text-slate-500 text-sm">Useful for practicing how to rephrase important information from readings in an age-appropriate style.</p></div></div>
+                    <!-- Prompt 2 -->
+                    <div class="prompt-container bg-slate-800 rounded-lg border border-slate-700 transition-all duration-300 hover:border-teal-500"><button class="prompt-toggle w-full text-left p-4 flex justify-between items-center cursor-pointer"><span class="font-semibold">Educational Instagram Captions</span><svg class="chevron-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="prompt-content"><strong class="block text-slate-300 mb-1 mt-2">Prompt:</strong><p class="prompt-text-to-copy text-slate-400">"Create 3 short and cool Instagram captions about the importance of literacy among teens."</p><button class="copy-btn mt-3 bg-teal-500/10 text-teal-300 px-3 py-1 rounded-md text-sm hover:bg-teal-500/20">Copy Prompt</button><strong class="block text-slate-300 mb-1 mt-4">Example Output:</strong><div class="space-y-2 text-slate-400 italic"><blockquote class="border-l-2 border-slate-600 pl-3">"Books aren't just a pile of paper. They're a window to the world. #TeenLiteracy"</blockquote><blockquote class="border-l-2 border-slate-600 pl-3">"Scrolling is fine, but let's read too! 10 minutes a day can change your mind."</blockquote><blockquote class="border-l-2 border-slate-600 pl-3">"All cool people... are readers. Start with you."</blockquote></div><strong class="block text-slate-300 mb-1 mt-4">Notes:</strong><p class="text-slate-500 text-sm">Perfect for digital education that's relatable to a teen's daily life.</p></div></div>
+                    <!-- Prompt 3 -->
+                    <div class="prompt-container bg-slate-800 rounded-lg border border-slate-700 transition-all duration-300 hover:border-teal-500"><button class="prompt-toggle w-full text-left p-4 flex justify-between items-center cursor-pointer"><span class="font-semibold">Short Story Inspiration</span><svg class="chevron-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="prompt-content"><strong class="block text-slate-300 mb-1 mt-2">Prompt:</strong><p class="prompt-text-to-copy text-slate-400">"Give me a short story idea for teens about friendship and technology, set in a school."</p><button class="copy-btn mt-3 bg-teal-500/10 text-teal-300 px-3 py-1 rounded-md text-sm hover:bg-teal-500/20">Copy Prompt</button><strong class="block text-slate-300 mb-1 mt-4">Example Output:</strong><blockquote class="border-l-2 border-slate-600 pl-3 text-slate-400 italic">An introverted student finds their true friend through a project to build a school chatbot. They form an AI Club and face challenges in an inter-school competition.</blockquote><strong class="block text-slate-300 mb-1 mt-4">Notes:</strong><p class="text-slate-500 text-sm">Encourages imagination and creative ideas among teens.</p></div></div>
+                    <!-- Prompt 4 -->
+                    <div class="prompt-container bg-slate-800 rounded-lg border border-slate-700 transition-all duration-300 hover:border-teal-500"><button class="prompt-toggle w-full text-left p-4 flex justify-between items-center cursor-pointer"><span class="font-semibold">Making History Fun</span><svg class="chevron-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="prompt-content"><strong class="block text-slate-300 mb-1 mt-2">Prompt:</strong><p class="prompt-text-to-copy text-slate-400">"Explain the Proclamation of Indonesian Independence as if you were telling a story to a peer."</p><button class="copy-btn mt-3 bg-teal-500/10 text-teal-300 px-3 py-1 rounded-md text-sm hover:bg-teal-500/20">Copy Prompt</button><strong class="block text-slate-300 mb-1 mt-4">Example Output:</strong><blockquote class="border-l-2 border-slate-600 pl-3 text-slate-400 italic">So, check this out: early in the morning on August 17, 1945, Soekarno and Hatta were ready to read the proclamation text. They used a simple microphone at a house on Pegangsaan Timur Street. That was the start of Indonesia's freedom! How cool is that?</blockquote><strong class="block text-slate-300 mb-1 mt-4">Notes:</strong><p class="text-slate-500 text-sm">Makes history easier to understand and remember.</p></div></div>
+                    <!-- Prompt 5 -->
+                    <div class="prompt-container bg-slate-800 rounded-lg border border-slate-700 transition-all duration-300 hover:border-teal-500"><button class="prompt-toggle w-full text-left p-4 flex justify-between items-center cursor-pointer"><span class="font-semibold">Interactive Quiz Answers</span><svg class="chevron-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="prompt-content"><strong class="block text-slate-300 mb-1 mt-2">Prompt:</strong><p class="prompt-text-to-copy text-slate-400">"Provide 5 multiple-choice questions about explanatory texts with their answers for an exam practice."</p><button class="copy-btn mt-3 bg-teal-500/10 text-teal-300 px-3 py-1 rounded-md text-sm hover:bg-teal-500/20">Copy Prompt</button><strong class="block text-slate-300 mb-1 mt-4">Example Output:</strong>
+                        <div class="space-y-4 text-slate-400">
+                            <div class="text-sm">
+                                <p>1. The purpose of an explanatory text is to...</p>
+                                <ul class="list-disc list-inside pl-4 mt-1">
+                                    <li>A. Entertain</li>
+                                    <li class="text-teal-400 font-semibold">B. Explain a process ✅</li>
+                                    <li>C. Persuade the reader</li>
+                                    <li>D. Convey an opinion</li>
+                                </ul>
+                            </div>
+                            <div class="text-sm">
+                                <p>2. The main characteristic of an explanatory text is...</p>
+                                <ul class="list-disc list-inside pl-4 mt-1">
+                                    <li>A. It contains dialogue between characters</li>
+                                    <li class="text-teal-400 font-semibold">B. It describes cause and effect ✅</li>
+                                    <li>C. It uses slang</li>
+                                    <li>D. It contains steps to make something</li>
+                                </ul>
+                            </div>
+                            <div class="text-sm">
+                                <p>3. The correct structure of an explanatory text is...</p>
+                                <ul class="list-disc list-inside pl-4 mt-1">
+                                    <li>A. Identification → Complication → Resolution</li>
+                                    <li>B. Character introduction → Problem → Closing</li>
+                                    <li class="text-teal-400 font-semibold">C. General statement → Sequenced explanation → Interpretation ✅</li>
+                                    <li>D. Goal → Steps → Closing</li>
+                                </ul>
+                            </div>
+                            <div class="text-sm">
+                                <p>4. Conjunctions often used in explanatory texts are...</p>
+                                <ul class="list-disc list-inside pl-4 mt-1">
+                                    <li class="text-teal-400 font-semibold">A. Therefore, as a result, so ✅</li>
+                                    <li>B. But, however, although</li>
+                                    <li>C. Then, next, finally</li>
+                                    <li>D. Such as, for example, for instance</li>
+                                </ul>
+                            </div>
+                            <div class="text-sm">
+                                <p>5. A topic commonly discussed in explanatory texts is...</p>
+                                <ul class="list-disc list-inside pl-4 mt-1">
+                                    <li>A. A love story</li>
+                                    <li>B. A magic trick</li>
+                                    <li class="text-teal-400 font-semibold">C. The process of a volcanic eruption ✅</li>
+                                    <li>D. An imaginary and fictional story</li>
+                                </ul>
+                            </div>
+                        </div>
+                    <strong class="block text-slate-300 mb-1 mt-4">Notes:</strong><p class="text-slate-500 text-sm">This multiple-choice format is perfect for self-study and can be used in apps like Google Forms or Quizizz.</p></div></div>
+                    <!-- Tips Box for Teens -->
+                    <div class="bg-teal-900/50 border border-teal-700 p-5 rounded-lg mt-6"><h4 class="font-bold text-teal-300 flex items-center mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="m15 3 6 6"></path><path d="M9 17H5"></path></svg>Tips for Teens</h4><ul class="list-disc list-inside text-teal-300/90 space-y-1"><li>Use a casual tone: "use a high schooler's style".</li><li>Limit the length: "in 200 words".</li><li>Add clear context: "for an Instagram caption".</li></ul></div>
+                </div>
+
+                <!-- Prompts for Parents -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-sky-400 text-center lg:text-left mb-4">For Parents</h3>
+                    <!-- Prompt 1 -->
+                    <div class="prompt-container bg-slate-800 rounded-lg border border-slate-700 transition-all duration-300 hover:border-sky-500"><button class="prompt-toggle w-full text-left p-4 flex justify-between items-center cursor-pointer"><span class="font-semibold">Explaining Modern Terms</span><svg class="chevron-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="prompt-content"><strong class="block text-slate-300 mb-1 mt-2">Prompt:</strong><p class="prompt-text-to-copy text-slate-400">"Explain what social media is to a parent who is not used to the internet, using simple language."</p><button class="copy-btn mt-3 bg-sky-500/10 text-sky-300 px-3 py-1 rounded-md text-sm hover:bg-sky-500/20">Copy Prompt</button><strong class="block text-slate-300 mb-1 mt-4">Example Output:</strong><blockquote class="border-l-2 border-slate-600 pl-3 text-slate-400 italic">Social media is a place on the internet to share stories, photos, or videos. We can communicate with friends and family through text or pictures. Examples are Facebook and WhatsApp.</blockquote><strong class="block text-slate-300 mb-1 mt-4">Notes:</strong><p class="text-slate-500 text-sm">Simple, non-technical, and suitable for beginners.</p></div></div>
+                    <!-- Prompt 2 -->
+                    <div class="prompt-container bg-slate-800 rounded-lg border border-slate-700 transition-all duration-300 hover:border-sky-500"><button class="prompt-toggle w-full text-left p-4 flex justify-between items-center cursor-pointer"><span class="font-semibold">Helping Kids with Homework</span><svg class="chevron-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="prompt-content"><strong class="block text-slate-300 mb-1 mt-2">Prompt:</strong><p class="prompt-text-to-copy text-slate-400">"Create a summary of a 5th-grade science lesson on the respiratory system, so it's easy for a child to understand."</p><button class="copy-btn mt-3 bg-sky-500/10 text-sky-300 px-3 py-1 rounded-md text-sm hover:bg-sky-500/20">Copy Prompt</button><strong class="block text-slate-300 mb-1 mt-4">Example Output:</strong><blockquote class="border-l-2 border-slate-600 pl-3 text-slate-400 italic">The respiratory system helps us breathe. Air enters through the nose, then goes to the lungs. The lungs exchange oxygen for carbon dioxide. The dirty air is released when we exhale.</blockquote><strong class="block text-slate-300 mb-1 mt-4">Notes:</strong><p class="text-slate-500 text-sm">Can be read aloud or used while helping with homework.</p></div></div>
+                    <!-- Prompt 3 -->
+                    <div class="prompt-container bg-slate-800 rounded-lg border border-slate-700 transition-all duration-300 hover:border-sky-500"><button class="prompt-toggle w-full text-left p-4 flex justify-between items-center cursor-pointer"><span class="font-semibold">Writing Formal Messages</span><svg class="chevron-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="prompt-content"><strong class="block text-slate-300 mb-1 mt-2">Prompt:</strong><p class="prompt-text-to-copy text-slate-400">"Create a polite WhatsApp message template to offer condolences to a coworker."</p><button class="copy-btn mt-3 bg-sky-500/10 text-sky-300 px-3 py-1 rounded-md text-sm hover:bg-sky-500/20">Copy Prompt</button><strong class="block text-slate-300 mb-1 mt-4">Example Output:</strong><blockquote class="border-l-2 border-slate-600 pl-3 text-slate-400 italic">My deepest condolences on the passing of your beloved mother. May you and your family be given strength and fortitude.</blockquote><strong class="block text-slate-300 mb-1 mt-4">Notes:</strong><p class="text-slate-500 text-sm">Helps parents who lack confidence in their writing.</p></div></div>
+                    <!-- Prompt 4 -->
+                    <div class="prompt-container bg-slate-800 rounded-lg border border-slate-700 transition-all duration-300 hover:border-sky-500"><button class="prompt-toggle w-full text-left p-4 flex justify-between items-center cursor-pointer"><span class="font-semibold">Family Budgeting Tips</span><svg class="chevron-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="prompt-content"><strong class="block text-slate-300 mb-1 mt-2">Prompt:</strong><p class="prompt-text-to-copy text-slate-400">"Give 5 household budgeting tips for parents with a fixed monthly income."</p><button class="copy-btn mt-3 bg-sky-500/10 text-sky-300 px-3 py-1 rounded-md text-sm hover:bg-sky-500/20">Copy Prompt</button><strong class="block text-slate-300 mb-1 mt-4">Example Output:</strong><ol class="list-decimal list-inside space-y-1 text-slate-400"><li>Create a monthly budget and track expenses.</li><li>Prioritize essential needs.</li><li>Set aside at least 10% for savings.</li><li>Avoid consumer debt.</li><li>Shop with a list to prevent impulse buying.</li></ol><strong class="block text-slate-300 mb-1 mt-4">Notes:</strong><p class="text-slate-500 text-sm">Practical and can be immediately applied in daily life.</p></div></div>
+                    <!-- Prompt 5 -->
+                    <div class="prompt-container bg-slate-800 rounded-lg border border-slate-700 transition-all duration-300 hover:border-sky-500"><button class="prompt-toggle w-full text-left p-4 flex justify-between items-center cursor-pointer"><span class="font-semibold">Guiding Kids with AI</span><svg class="chevron-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div class="prompt-content"><strong class="block text-slate-300 mb-1 mt-2">Prompt:</strong><p class="prompt-text-to-copy text-slate-400">"Write a short guide for parents on how to introduce the use of AI (like ChatGPT) to a middle schooler."</p><button class="copy-btn mt-3 bg-sky-500/10 text-sky-300 px-3 py-1 rounded-md text-sm hover:bg-sky-500/20">Copy Prompt</button><strong class="block text-slate-300 mb-1 mt-4">Example Output:</strong><blockquote class="border-l-2 border-slate-600 pl-3 text-slate-400 italic">Teach them that AI is a tool, not a replacement. Start with simple tasks, like making summaries or brainstorming ideas. Supervise its use and ensure it's used ethically. Also, discuss the pros and cons of AI.</blockquote><strong class="block text-slate-300 mb-1 mt-4">Notes:</strong><p class="text-slate-500 text-sm">Boosts parents' confidence in guiding their children through new technology.</p></div></div>
+                    <!-- Tips Box for Parents -->
+                    <div class="bg-sky-900/50 border border-sky-700 p-5 rounded-lg mt-6"><h4 class="font-bold text-sky-300 flex items-center mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M15 14c.2-1 .7-1.7 1.5-2.5C17.7 10.5 19 9 19 7a4 4 0 0 0-8 0c0 2 1.3 3.5 2.5 4.5.8.8 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>Tips for Parents</h4><ul class="list-disc list-inside text-sky-300/90 space-y-1"><li>Ask for simple explanations: "explain in simple terms".</li><li>Request a step-by-step format.</li><li>State the purpose of use: "for a WhatsApp message".</li></ul></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflection and Conclusion Section -->
+        <section class="mt-16 bg-slate-800/70 p-8 rounded-2xl border border-slate-700">
+            <h2 class="text-3xl font-bold text-center text-white mb-6">💡 Reflection & Conclusion</h2>
+            <div class="max-w-3xl mx-auto text-center text-slate-300 space-y-4">
+                <p>A <strong class="text-white">fast, simple, and practical</strong> approach is highly effective for teens, while parents require guidance that is <strong class="text-white">systematic and relevant</strong> to their daily lives.</p>
+                <p class="font-semibold text-lg text-white mt-4">With the right education and direction, AI can become an inclusive and genuinely useful tool for everyone.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-16 border-t border-slate-700 pt-8 text-center text-slate-400">
+             <p class="font-bold text-lg text-white">R. Bagus Bashilla R (Boden)</p>
+             <div class="flex justify-center items-center space-x-6 my-4">
+                <a href="mailto:bashllaboden1@gmail.com" class="flex items-center hover:text-sky-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    Email
+                </a>
+                <a href="https://www.linkedin.com/in/bagus-bashilla-437ab0287" target="_blank" rel="noopener noreferrer" class="flex items-center hover:text-sky-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    LinkedIn
+                </a>
+            </div>
+            <p class="text-sm text-slate-500 mt-6">Tools Used: ChatGPT, Gemini, Canva, Google Docs, HTML, Tailwind CSS, JavaScript</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const promptToggles = document.querySelectorAll('.prompt-toggle');
+            promptToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const chevron = toggle.querySelector('.chevron-icon');
+                    content.classList.toggle('open');
+                    if (content.classList.contains('open')) {
+                        chevron.style.transform = 'rotate(180deg)';
+                    } else {
+                        chevron.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const container = button.closest('.prompt-content');
+                    const promptTextElement = container.querySelector('.prompt-text-to-copy');
+                    const promptText = promptTextElement.innerText;
+                    
+                    const originalButtonText = button.innerText;
+                    const textArea = document.createElement('textarea');
+                    textArea.value = promptText;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    try {
+                        document.execCommand('copy');
+                        button.innerText = 'Copied!';
+                        button.classList.add('bg-green-500/20', 'text-green-300');
+                    } catch (err) {
+                        console.error('Failed to copy text: ', err);
+                        button.innerText = 'Copy Failed';
+                        button.classList.add('bg-red-500/20', 'text-red-300');
+                    }
+                    document.body.removeChild(textArea);
+
+                    setTimeout(() => {
+                        button.innerText = originalButtonText;
+                        button.classList.remove('bg-green-500/20', 'text-green-300', 'bg-red-500/20', 'text-red-300');
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
